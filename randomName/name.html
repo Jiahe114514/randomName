@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>点名</title>
+    <link rel="stylesheet" href="./name.css">
+</head>
+<body>
+        <header>
+            <div class="header">
+                点名系统
+            </div>
+            <div class="style">
+                <select name="style" id="style">
+                    <option value="light" id="light">明亮模式</option>
+                    <option value="dark" id="dark">黑夜模式</option>
+                    <option value="Genshin" id="Genshin">原神启动</option>
+                </select>
+            </div>
+        </header>
+        <div class="fenkai">
+            &nbsp;
+        </div>
+        <div class="container">
+            <nav>
+                <div>
+                    <div class="nav" class="time">点名次数</div>
+                    <input type="number" value="1" min="1"><!-- 这个加减的需要更适配移动端和希沃白板，改下样式 -->
+                </div>
+                <div>
+                    <div class="nav" class="num">单次点名人数</div>
+                    <input type="number" value="1" min="1">
+                </div>
+                <div> 
+                    <div class="nav">自动去除重复姓名</div>               
+                    <input type="checkbox" checked>
+                </div>
+                <div>
+                    <button id="change">修改名单</button>
+                    <div class="modal">
+                        <button class="close">x</button>
+                        <br>
+                        <!-- <input id="schoolnum" type="number" placeholder="请输入学号"> -->
+                        <input id="name" type="text" placeholder="请输入姓名">
+                        <button type="submit" id="submit">提交</button>
+                        <table class="table1">
+                            <tbody class="tbody1">
+                                <tr>
+                                    <!-- <th>学号</th> -->
+                                    <th>姓名</th>
+                                    <th>删除</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </nav>
+            <main>
+                <table class="table2">
+                    <tbody class="tbody2">
+
+                    </tbody>
+                </table>
+                    <button class="start">开始点名</button>
+                    <button class="start" id="wipe">清空</button>
+            </main>
+        </div>
+        <footer>
+            <div class="footer">
+                by Jiahe
+            </div>
+        </footer>
+</body>
+<script src="./name.js"></script>
+</html>

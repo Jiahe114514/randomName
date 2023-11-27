@@ -93,17 +93,22 @@ wipe.addEventListener("click",function(){
 })
 const style=document.querySelector("#style");
 style.addEventListener("change",function(){
+    const header = document.getElementById('header-wrapper');
     const selected = style.value;
     if (selected==="light"){
         header.style.backgroundColor = "white";
         document.body.style.backgroundColor = "white";
+        document.body.style.backgroundImage = "";
 
     }else if (selected==="dark"){
         header.style.backgroundColor = "black";
         document.body.style.backgroundColor = "black";
+        document.body.style.backgroundImage = "";
 
     }else if (selected==="Genshin"){
-        document.body.style.backgroundImage="./others/原始人.jpg"
+        header.style.backgroundColor = "#00000000";
+        document.body.style.backgroundColor = "#00000000";
+        document.body.style.backgroundImage = "url('./others/原始人.jpg')";
     }
 })
 
